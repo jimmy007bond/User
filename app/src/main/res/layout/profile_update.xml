@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_grey_900"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue_grey_900"
+            app:expanded="false"
+            android:id="@+id/app_profile">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/blue_grey_900"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:layout_scrollFlags="enterAlways" >
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/textView101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Edit"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/textView101"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text=" Profile"
+                        android:textColor="@color/yellow_A700"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+                </android.support.v7.widget.Toolbar>
+
+            </RelativeLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/logout"
+            android:layout_below="@+id/app_profile"
+            android:background="@android:color/transparent"
+            android:fillViewport="true"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="center"
+                        android:text="Add or change image to help driver identify you. "
+                        android:textColor="@color/white" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/img_profil_update"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:minHeight="80dp"
+                        android:minWidth="80dp"
+                        android:src="@drawable/com_facebook_profile_picture_blank_portrait" />
+
+                </LinearLayout>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_account_grey600_36dp" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/top"
+                        android:visibility="visible">
+
+                        <EditText
+                            android:id="@+id/editText_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginStart="40dp"
+                            android:drawableEnd="@android:drawable/ic_menu_edit"
+                            android:ems="10"
+                            android:fontFamily="@font/roboto_thin"
+                            android:hint="Name"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_phone_grey600_36dp" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/top"
+                        android:visibility="visible">
+
+                        <EditText
+                            android:id="@+id/editText_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:drawableEnd="@android:drawable/ic_menu_edit"
+                            android:ems="10"
+                            android:fontFamily="@font/roboto_thin"
+                            android:hint="Mobile No"
+                            android:inputType="number"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            tools:ignore="RtlHardcoded" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="3dp"
+                        android:adjustViewBounds="false"
+                        android:src="@mipmap/ic_email_" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/top"
+                        android:visibility="visible">
+
+                        <EditText
+                            android:id="@+id/editText_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:drawableEnd="@android:drawable/ic_menu_edit"
+                            android:ems="10"
+                            android:fontFamily="@font/roboto_thin"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:background="@android:drawable/dark_header"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_horizontal|center"
+                        android:text="Address"
+                        android:textColor="@color/white"
+                        android:textColorLink="@color/top"
+                        android:textSize="14sp" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/top"
+                        android:layout_weight="1"
+                        style="@style/Widget.Design.TextInputLayout"
+                        app:hintTextAppearance="@style/MyHintText"
+                        android:visibility="visible">
+                    <EditText
+                        android:id="@+id/faddresso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="20"
+                        android:fontFamily="@font/roboto_thin"
+                        android:hint="Street Address"
+                        android:inputType="textMultiLine|textPersonName"
+                        android:textColor="@color/top"
+                        android:textColorHighlight="@color/top"
+                        android:textColorHint="@color/top"
+                        android:textColorLink="@color/top"
+                        android:theme="@style/MyEditText"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/top"
+                            android:layout_weight="0.33"
+                            style="@style/Widget.Design.TextInputLayout"
+                            app:hintTextAppearance="@style/MyHintText"
+                            android:visibility="visible">
+                        <EditText
+                            android:id="@+id/cityo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:fontFamily="@font/roboto_thin"
+                            android:hint="City"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/top"
+                            android:textColorHighlight="@color/top"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/top"
+                            android:theme="@style/MyEditText" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/top"
+                            android:layout_weight="0.33"
+                            style="@style/Widget.Design.TextInputLayout"
+                            app:hintTextAppearance="@style/MyHintText"
+                            android:visibility="visible">
+
+                        <EditText
+                            android:id="@+id/stateo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:fontFamily="@font/roboto_thin"
+                            android:hint="State/Province"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/top"
+                            android:textColorHighlight="@color/top"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/top"
+                            android:theme="@style/MyEditText" />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:textColorHint="@color/top"
+                            style="@style/Widget.Design.TextInputLayout"
+                            app:hintTextAppearance="@style/MyHintText"
+                            android:visibility="visible">
+                        <EditText
+                            android:id="@+id/countryo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/roboto_thin"
+                            android:hint="Country"
+                            android:inputType="textPersonName"
+                            android:text="India"
+                            android:textColor="@color/top"
+                            android:textColorHighlight="@color/top"
+                            android:textColorHint="@color/top"
+                            android:textColorLink="@color/top"
+                            android:theme="@style/MyEditText" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/top"
+                        style="@style/Widget.Design.TextInputLayout"
+                        app:hintTextAppearance="@style/MyHintText"
+                        android:visibility="visible">
+                    <EditText
+                        android:id="@+id/pino"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="15"
+                        android:fontFamily="@font/roboto_thin"
+                        android:hint="Pin"
+                        android:inputType="number"
+                        android:textColor="@color/top"
+                        android:textColorHighlight="@color/top"
+                        android:textColorHint="@color/top"
+                        android:textColorLink="@color/top"
+                        android:theme="@style/MyEditText" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:background="@android:drawable/screen_background_dark_transparent"
+            android:elevation="20dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="SAVE"
+            android:textColor="@color/top"
+            android:theme="@style/Widget.AppCompat.Button.Borderless.Colored" />
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>

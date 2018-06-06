@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@color/white"
+    android:elevation="22dp"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="16dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:orientation="vertical"
+                android:paddingEnd="5dp">
+
+                <EditText
+                    android:id="@+id/sosname"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/com_facebook_auth_dialog_header_background"
+                    android:drawableLeft="@mipmap/ic_name_"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="From"
+                    android:inputType="textImeMultiLine|textNoSuggestions"
+                    android:padding="5dp"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/soscontact"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/com_facebook_auth_dialog_header_background"
+                    android:drawableLeft="@mipmap/ic_phone_call"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="To"
+                    android:inputType="textImeMultiLine|textNoSuggestions"
+                    android:padding="5dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/sosdel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="top"
+                android:layout_marginEnd="1dp"
+                android:layout_weight="0.2"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/ic_del" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_horizontal|center"
+                android:text="Share ride details"
+                android:visibility="gone" />
+
+            <com.uniquestudio.library.CircleCheckBox
+                android:id="@+id/sosshare"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_weight="0.19"
+                android:visibility="gone"
+                app:animation_duration="800"
+                app:background_color="@color/blue_grey_900"
+                app:border_color="@color/white"
+                app:border_width="0dp"
+                app:tick_color="@color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

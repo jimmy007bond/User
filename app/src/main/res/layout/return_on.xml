@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/card_background"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/hr12"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.2"
+            android:checked="false"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Return in 12 hours"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_hr12"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/card_background"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/hr24"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.2"
+            android:checked="false"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Return in 24 hours"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_hr24"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/card_background"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/pick_choose_date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.2"
+            android:checked="false"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Pick a return date"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/returnRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/card_background"
+        android:padding="10dp"
+        android:visibility="gone" />
+</LinearLayout>

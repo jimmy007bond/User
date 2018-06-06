@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@drawable/toolscreen"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_profile"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="false"
+        android:layout_gravity="bottom|left"
+        android:layout_toEndOf="@+id/img_profile"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/my_star"
+            android:layout_width="21dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            app:srcCompat="@mipmap/ic_star" />
+
+        <TextView
+            android:id="@+id/name_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_profile"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="left|center"
+            android:text="Guest"
+            android:textColor="@color/top"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_profile"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:minHeight="80dp"
+        android:minWidth="80dp"
+        android:src="@drawable/com_facebook_profile_picture_blank_portrait" />
+
+
+    <ImageView
+        android:id="@+id/edit_profile"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="false"
+        android:src="@android:drawable/ic_menu_edit"
+        android:visibility="visible" />
+
+
+</RelativeLayout>
+

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_grey_900"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_later_past"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/blue_grey_900"
+            app:expanded="true">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_later_past"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@color/blue_grey_900"
+                app:layout_scrollFlags="enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/past101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="false"
+                        android:background="@android:color/transparent"
+                        android:text="Your"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/past102"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/past101"
+                        android:layout_centerVertical="false"
+                        android:background="@android:color/transparent"
+                        android:text="Ride"
+                        android:textColor="@color/yellow_A700"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_later_past">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="0.8"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/past_driver"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_gravity="top"
+                        android:src="@drawable/com_facebook_profile_picture_blank_portrait" />
+
+
+
+                        <EditText
+                            android:id="@+id/past_name_driver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@android:color/transparent"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_vertical"
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:padding="5dp"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/past_you_rated"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/roboto_thin"
+                                android:gravity="center_vertical"
+                                android:inputType="textMultiLine|textNoSuggestions"
+                                android:textSize="12sp" />
+
+                            <RatingBar
+                                android:id="@+id/past_rate"
+                                style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:isIndicator="true"
+                                android:max="5"
+                                android:numStars="5"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:rating="5"
+                                android:stepSize="0.5" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/past_review"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/roboto_thin"
+                                android:gravity="center_vertical"
+                                android:inputType="textMultiLine|textNoSuggestions"
+                                android:textSize="12sp" />
+
+                            <EditText
+                                android:id="@+id/past_review_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:background="@android:color/transparent"
+                                android:ems="8"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_vertical"
+                                android:inputType="textMultiLine|textNoSuggestions"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/past_car_image"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="top"
+                            android:layout_marginEnd="15dp" />
+
+
+                        <EditText
+                            android:id="@+id/past_car_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@android:color/transparent"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_vertical"
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:padding="5dp"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                    android:orientation="horizontal">
+
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        xmlns:android="http://schemas.android.com/apk/res/android">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:id="@+id/total_cost"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:textSize="24sp" />
+
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/fare_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:text="Fare Details"
+                            android:textColor="@color/blue_grey_600"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/price_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/crop__selectable_background"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:background="@color/white"
+                                android:orientation="horizontal"
+                                android:padding="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:background="@color/white"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:gravity="left|center_vertical|center_horizontal"
+                                        android:text="Total"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/total_km_cost"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:id="@+id/c_applied"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:background="@color/white"
+                                android:orientation="horizontal"
+                                android:padding="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:background="@color/white"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:gravity="left|center_vertical|center_horizontal"
+                                        android:text="Coupon applied"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/total_coupon"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:background="@color/white"
+                                android:orientation="horizontal"
+                                android:padding="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="214dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:background="@color/white"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:gravity="left|center_vertical|center_horizontal"
+                                        android:text="Taxes"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tax_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:gravity="left|center_vertical|center_horizontal"
+                                        android:text="SGST"
+                                        android:textSize="8sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/total_taxes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_weight="0.6"
+                            android:background="@color/white"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="0.7"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="left|center_vertical|center_horizontal"
+                                android:text="Total Fare"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/total_fare"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="20dp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/past_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:visibility="visible">
+
+                        <EditText
+                            android:id="@+id/past_start_time_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@android:color/transparent"
+                            android:drawableStart="@drawable/green_dot"
+                            android:focusableInTouchMode="false"
+                            android:hint="Start time"
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:padding="5dp"
+                            android:textSize="14sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/past_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:visibility="visible">
+
+                        <EditText
+                            android:id="@+id/past_end_time_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@android:color/transparent"
+                            android:drawableStart="@drawable/red_dot"
+                            android:focusableInTouchMode="false"
+                            android:hint="End time"
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:padding="5dp"
+                            android:textSize="14sp" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/past_snapshot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:adjustViewBounds="true"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:scaleType="fitCenter" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarpast"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

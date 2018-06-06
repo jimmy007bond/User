@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+           >
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@mipmap/ic_home_white_48dp"
+            android:title="Home"
+            android:visible="true" />
+
+        <item
+            android:id="@+id/nav_reminder"
+            android:icon="@mipmap/ic_alarm_white_48dp"
+            android:title="My Rides"
+            android:visible="true" />
+    </group>
+
+    <item android:title="Connect">
+        <menu>
+            <item
+                android:id="@+id/nav_refer"
+                android:icon="@mipmap/ic_refer"
+                android:title="Refer &amp; Earn" />
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@mipmap/ic_sos1"
+                android:title="Emergency contacts" />
+        </menu>
+    </item>
+    <item android:title="Help">
+        <menu>
+            <item
+                android:id="@+id/logout"
+                android:icon="@mipmap/ic_support"
+                android:title="Support"
+                android:visible="false" />
+
+        </menu>
+    </item>
+</menu>

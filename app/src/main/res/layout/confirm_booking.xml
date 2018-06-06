@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:fitsSystemWindows="true">
+
+            <RelativeLayout
+                android:id="@+id/ride_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@android:drawable/screen_background_dark_transparent"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:visibility="visible">
+                <LinearLayout
+                    android:id="@+id/choose_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/car_choosen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="1dp"
+                        android:layout_weight="0.5"
+                        android:background="@android:drawable/screen_background_dark"
+                        android:textColor="@color/top" />
+
+                    <Button
+                        android:id="@+id/another_car"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@android:drawable/screen_background_dark_transparent"
+                        android:textColor="@color/top" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textotp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="OTP"
+                    android:layout_below="@+id/choose_car"
+                    android:textColor="@color/white" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/confirm_ride"
+                    android:layout_alignBottom="@+id/relativeLayout3"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textotp"
+                    android:background="@android:color/transparent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/driver_image"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/com_facebook_profile_picture_blank_portrait" />
+
+                    <TextView
+                        android:id="@+id/driver_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/ratingBar"
+                        android:layout_alignParentTop="false"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@+id/driver_image"
+                        android:gravity="center_horizontal|center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/driver_image"
+                        android:numStars="5"
+                        android:rating="5" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/textotp"
+                    android:layout_gravity="right|end">
+
+                    <TextView
+                        android:id="@+id/driver_car_type"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/driver_car_no"
+                        android:layout_toEndOf="@+id/driver_car"
+                        android:gravity="center_horizontal"
+                        android:text="TextView" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/driver_car"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/com_facebook_profile_picture_blank_portrait" />
+
+                    <TextView
+                        android:id="@+id/driver_car_no"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/driver_car"
+                        android:layout_alignParentBottom="false"
+                        android:layout_alignParentStart="false"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/driver_car"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lov1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout2"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/call_driver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@android:drawable/screen_background_dark_transparent"
+                        android:drawableLeft="@android:drawable/sym_action_call"
+                        android:text="Call Driver"
+                        android:textColor="@color/top" />
+
+                    <Button
+                        android:id="@+id/track_driver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@android:drawable/screen_background_dark_transparent"
+                        android:drawableStart="@android:drawable/ic_menu_mylocation"
+                        android:text="Track Driver"
+                        android:textColor="@color/top" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/confirm_ride"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentBottom="false"
+                    android:layout_below="@+id/relativeLayout3"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    android:text="Confirm Booking"
+                    android:textColor="@color/top"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+
+
+
+</RelativeLayout>

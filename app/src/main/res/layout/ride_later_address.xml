@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_grey_900"
+    android:fitsSystemWindows="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_later"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/blue_grey_900"
+            app:expanded="true">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar_later"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/blue_grey_900"
+                    app:layout_scrollFlags="enterAlways"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center">
+
+
+                <TextView
+                    android:id="@+id/place1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Ride"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/place2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/place1"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Later"
+                    android:textColor="@color/yellow_A700"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+                </android.support.v7.widget.Toolbar>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/lov1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/con"
+                android:layout_margin="3dp"
+                android:background="@color/blue_grey_900"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/i1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="false"
+                        android:adjustViewBounds="false"
+                        android:background="@android:color/transparent"
+                        android:baselineAlignBottom="false"
+                        android:contentDescription="TODO"
+                        android:src="@android:drawable/presence_online" />
+
+                    <TextView
+                        android:id="@+id/et_myLocation_later"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/i1"
+                        android:animateLayoutChanges="true"
+                        android:background="@android:color/transparent"
+                        android:ems="12"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="center_vertical|start"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="Pick from"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/i2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/transparent"
+                        android:src="@android:drawable/ic_notification_overlay" />
+
+                    <TextView
+                        android:id="@+id/et_destLocation_later"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="false"
+                        android:layout_toEndOf="@+id/i2"
+                        android:animateLayoutChanges="false"
+                        android:background="@android:color/transparent"
+                        android:ellipsize="end"
+                        android:enabled="true"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="left|center_vertical|start"
+                        android:hint="Drop at"
+                        android:maxLines="2"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="false"
+            android:layout_below="@+id/app_later"
+            android:orientation="vertical">
+
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:map="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/map_later"
+                android:name="com.geekworkx.hellocab.Adapters.CustomMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                map:cameraZoom="16"
+                map:mapType="normal" />
+
+            <ProgressBar
+                android:id="@+id/progressBarlater"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="107dp"
+                android:layout_marginTop="13dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/myLocationCustomButton_later"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_above="@+id/ride_detail_later"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="false"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:adjustViewBounds="true"
+                android:background="@mipmap/ic_location"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/ride_detail_later"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:custom="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/choose_car_later"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/confirm_ride_later"
+                    android:layout_alignParentTop="false"
+                    android:background="@android:color/transparent"
+                    android:fillViewport="true"
+                    android:foregroundGravity="center_horizontal|center"
+                    android:scrollbarSize="0dp"
+                    android:visibility="visible">
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:background="@android:color/transparent"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <Button
+                            android:id="@+id/car_choosen_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/blue_grey_900"
+                            android:fontFamily="@font/roboto_thin"
+                            android:minWidth="128dp"
+                            android:textColor="@color/top" />
+
+                        <Button
+                            android:id="@+id/car_choosen_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/blue_grey_700"
+                            android:fontFamily="@font/roboto_thin"
+                            android:minWidth="128dp"
+                            android:textColor="@color/top" />
+
+                        <Button
+                            android:id="@+id/car_choosen_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/blue_grey_700"
+                            android:fontFamily="@font/roboto_thin"
+                            android:minWidth="128dp"
+                            android:textColor="@color/top" />
+
+                        <Button
+                            android:id="@+id/car_choosen_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/blue_grey_700"
+                            android:fontFamily="@font/roboto_thin"
+                            android:minWidth="128dp"
+                            android:textColor="@color/yellow_400" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+                <Button
+                    android:id="@+id/confirm_ride_later"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/pp3"
+                    android:background="@color/blue_500"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Confirm Booking"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

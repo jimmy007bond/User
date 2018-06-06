@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/buttondates"
+            android:layout_below="@+id/app_later_dates"
+            android:layout_gravity="center_vertical|center"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+
+            <ProgressBar
+                android:id="@+id/progressBar21"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/no_rides"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:fontFamily="@font/roboto_thin"
+        android:gravity="center"
+        android:text="You have no upcoming rides"
+        android:textSize="18dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/laterRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:background="@android:color/transparent"
+        android:visibility="gone" >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <Button
+        android:id="@+id/buttondates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:background="@color/blue_grey_900"
+        android:fontFamily="@font/roboto_thin"
+        android:text="Add More"
+        android:textColor="@color/top"
+        android:textStyle="bold" />
+</LinearLayout>

@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.geekworkx.hellocab.Adapters.HeightWrappingViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/viewPagerLater"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:padding="10dp"
+    android:visibility="visible">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/f_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="true"
+            android:background="@color/blue_grey_900"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="center_vertical|center"
+            android:text="Choose an option below"
+            android:textColor="@color/top"
+            android:textSize="18sp" />
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:elevation="22dp"
+            android:paddingBottom="20dp">
+
+            <Button
+                android:id="@+id/buttono"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/blue_grey_900"
+                android:drawableEnd="@drawable/chevron_right"
+                android:fontFamily="@font/roboto_thin"
+                android:gravity="center"
+                android:minHeight="74dp"
+                android:paddingEnd="20dp"
+                android:text="BOOK FOR ONE DAY"
+                android:textAlignment="center"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/top" />
+
+
+            <Button
+                android:id="@+id/buttond"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@+id/buttono"
+                android:layout_centerVertical="false"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/blue_grey_900"
+                android:drawableEnd="@drawable/chevron_right"
+                android:fontFamily="@font/roboto_thin"
+                android:gravity="center"
+                android:minHeight="74dp"
+                android:paddingEnd="20dp"
+                android:text="MULTIPLE DAYS BOOKING"
+                android:textAlignment="center"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/top" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/s_pager"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/blue_grey_900"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="center_horizontal|center"
+            android:text="Select Time"
+            android:textColor="@color/top" />
+
+        <TimePicker
+            android:id="@+id/timePicker_later"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_centerInParent="true"
+            android:amPmTextColor="@color/top"
+            android:background="@color/white"
+            android:headerBackground="@color/blue_grey_900"
+            android:headerTimeTextAppearance="@style/WindowTitleStyle"
+            android:padding="10dp"
+            android:timePickerMode="clock" />
+
+        <Button
+            android:id="@+id/btn_time"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/blue_grey_900"
+            android:fontFamily="@font/roboto_thin"
+            android:text="Next"
+            android:layout_below="@+id/timePicker_later"
+            android:textColor="@color/top" />
+
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/t_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/tex"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/blue_grey_900"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="center_horizontal|center"
+            android:text="Select Date"
+            android:textColor="@color/top" />
+
+        <CalendarView
+            android:id="@+id/date_picker_later"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="false"
+            android:layout_below="@+id/tex"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:calendarTextColor="@color/top"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:dayOfWeekTextAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:endYear="2019"
+            android:headerBackground="@android:drawable/screen_background_dark_transparent"
+            android:selectedWeekBackgroundColor="@color/top"
+            android:spinnersShown="true"
+            android:splitMotionEvents="true"
+            android:startYear="2018"
+            android:weekNumberColor="@color/green_A700"
+            android:yearListSelectorColor="@color/top" />
+
+        <Button
+            android:id="@+id/btn_date"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/date_picker_later"
+            android:layout_centerHorizontal="true"
+            android:background="@color/blue_grey_900"
+            android:fontFamily="@font/roboto_thin"
+            android:text="Next"
+            android:textColor="@color/top" />
+
+    </RelativeLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/subscripe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_later_past">
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/ic_king"
+                android:fontFamily="@font/roboto_thin"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="10dp"
+                android:paddingLeft="5dp"
+                android:text="Become a previlege user"
+                android:textAlignment="gravity"
+                android:textColor="@color/teal_900"
+                android:textSize="24sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                android:ems="10"
+                android:fontFamily="@font/roboto_thin"
+                android:gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:text="Benifits for previledge user" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:fontFamily="@font/roboto_thin"
+                    android:padding="5dp"
+                    android:text="No price fluctuation" />
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:fontFamily="@font/roboto_thin"
+                    android:padding="5dp"
+                    android:text="Book and forget" />
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:fontFamily="@font/roboto_thin"
+                    android:padding="5dp"
+                    android:text="Can book for whole month" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/com_facebook_auth_dialog_header_background"
+                android:ellipsize="middle"
+                android:fontFamily="@font/roboto_thin"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:text="Subscribe for"
+                android:textColor="@color/blue_600"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/plane1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/month_plan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal" />
+
+                    <com.uniquestudio.library.CircleCheckBox
+                        android:id="@+id/month_check"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        app:background_color="@color/blue_grey_900"
+                        app:tick_color="@color/top" />
+
+                    <TextView
+                        android:id="@+id/month_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:elevation="24dp"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="center_horizontal"
+                        android:text="\u20B9 500"
+                        android:textColor="@color/cardview_dark_background" />
+
+                    <TextView
+                        android:id="@+id/month_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:elevation="24dp"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/cardview_dark_background" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/plane2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/month_plan_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        />
+
+                    <com.uniquestudio.library.CircleCheckBox
+                        android:id="@+id/month_check_1"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        app:background_color="@color/blue_grey_900"
+                        app:tick_color="@color/top" />
+
+                    <TextView
+                        android:id="@+id/month_price_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="24dp"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="center_horizontal"
+                        android:text="\u20B9 750"
+                        android:textColor="@color/cardview_dark_background" />
+
+                    <TextView
+                        android:id="@+id/month_time_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/cardview_dark_background" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/plane3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/month_plan_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        />
+
+                    <com.uniquestudio.library.CircleCheckBox
+                        android:id="@+id/month_check_2"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        app:background_color="@color/blue_grey_900"
+                        app:tick_color="@color/top" />
+                    <TextView
+                        android:id="@+id/month_price_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="center_horizontal"
+                        android:text="\u20B9 1000"
+                        android:textColor="@color/cardview_dark_background" />
+
+                    <TextView
+                        android:id="@+id/month_time_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/cardview_dark_background" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/blue_grey_900"
+                android:fontFamily="@font/roboto_thin"
+                android:gravity="center"
+                android:text="You will be redirected to payment window"
+                android:textColor="@color/top"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/start_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/texi"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/blue_grey_900"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="center_horizontal|center"
+            android:text="From date"
+            android:textColor="@color/top" />
+
+        <CalendarView
+            android:id="@+id/date_multiple_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texi"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:calendarTextColor="@color/top"
+            android:calendarViewShown="false"
+            android:datePickerMode="calendar"
+            android:dayOfWeekTextAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:endYear="2019"
+            android:headerBackground="@android:drawable/screen_background_dark_transparent"
+            android:spinnersShown="false"
+            android:splitMotionEvents="true"
+            android:startYear="2018"
+            android:yearListSelectorColor="@color/top" />
+
+        <Button
+            android:id="@+id/btn_multiple_start"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/date_multiple_start"
+            android:layout_centerHorizontal="true"
+            android:background="@color/blue_grey_900"
+            android:fontFamily="@font/roboto_thin"
+            android:text="Next"
+            android:textColor="@color/top" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/end_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/texie"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/blue_grey_900"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="center_horizontal|center"
+            android:text="To Date"
+            android:textColor="@color/top" />
+
+        <CalendarView
+            android:id="@+id/date_multiple_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texie"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:calendarTextColor="@color/top"
+            android:calendarViewShown="false"
+            android:datePickerMode="calendar"
+            android:dayOfWeekTextAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:endYear="2019"
+            android:headerBackground="@android:drawable/screen_background_dark_transparent"
+            android:spinnersShown="false"
+            android:splitMotionEvents="true"
+            android:startYear="2018"
+            android:yearListSelectorColor="@color/top" />
+
+        <Button
+            android:id="@+id/btn_multiple_end"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/date_multiple_end"
+            android:layout_centerHorizontal="true"
+            android:background="@color/blue_grey_900"
+            android:fontFamily="@font/roboto_thin"
+            android:text="Next"
+            android:textColor="@color/top" />
+
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/f4_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/textViewm"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="false"
+            android:background="@color/blue_grey_900"
+            android:fontFamily="@font/roboto_thin"
+            android:gravity="center_horizontal|center"
+            android:text="Select Pickup time and days"
+            android:textColor="@color/top" />
+
+        <TimePicker
+            android:id="@+id/timePicker_mul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewm"
+            android:layout_marginBottom="5dp"
+            android:amPmTextColor="@color/top"
+            android:background="@color/white"
+            android:fontFamily="@font/roboto_thin"
+            android:headerBackground="@color/blue_grey_900"
+            android:headerTimeTextAppearance="@style/WindowTitleStyle"
+            android:numbersBackgroundColor="@color/top"
+            android:numbersInnerTextColor="@color/top"
+            android:numbersSelectorColor="@color/teal_A700"
+            android:padding="10dp"
+            android:timePickerMode="spinner" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/h32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timePicker_mul"
+            android:background="@color/white"
+            android:gravity="center_horizontal|center"
+            android:minHeight="72dp"
+            android:orientation="horizontal"
+            android:scrollbarSize="1dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal|center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/radioMon"
+                        android:layout_alignParentTop="true"
+                        android:elevation="24dp"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="center_horizontal"
+                        android:text="Mon"
+                        android:textColor="@color/cardview_dark_background" />
+
+                    <com.uniquestudio.library.CircleCheckBox
+                        android:id="@+id/radioMon"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="false"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        app:background_color="@color/blue_grey_900"
+                        app:tick_color="@color/top" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:elevation="24dp"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="center_horizontal"
+                        android:text="Tue"
+                        android:textColor="@color/cardview_dark_background" />
+
+                    <com.uniquestudio.library.CircleCheckBox
+                        android:id="@+id/radioTue"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="false"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        app:background_color="@color/blue_grey_900"
+                        app:tick_color="@color/top" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:elevation="24dp"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="center_horizontal"
+                        android:text="Wed"
+                        android:textColor="@color/cardview_dark_background" />
+
+                    <com.uniquestudio.library.CircleCheckBox
+                        android:id="@+id/radioWed"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="false"
+                        android:layout_marginEnd="5dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        app:background_color="@color/blue_grey_900"
+                        app:tick_color="@color/top" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:elevation="24dp"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="center_horizontal"
+                        android:text="Thr"
+                        android:textColor="@color/cardview_dark_background" />
+
+                    <com.uniquestudio.library.CircleCheckBox
+                        android:id="@+id/radioThr"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="false"
+                        android:layout_marginEnd="5dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        app:background_color="@color/blue_grey_900"
+                        app:tick_color="@color/top" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:elevation="24dp"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="center_horizontal"
+                        android:text="Fri"
+                        android:textColor="@color/cardview_dark_background" />
+
+                    <com.uniquestudio.library.CircleCheckBox
+                        android:id="@+id/radioFri"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="false"
+                        android:layout_marginEnd="5dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        app:background_color="@color/blue_grey_900"
+                        app:tick_color="@color/top" />
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:elevation="24dp"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="center_horizontal"
+                        android:text="Sat"
+                        android:textColor="@color/cardview_dark_background" />
+
+                    <com.uniquestudio.library.CircleCheckBox
+                        android:id="@+id/radioSat"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="false"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        app:background_color="@color/blue_grey_900"
+                        app:tick_color="@color/top" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:elevation="24dp"
+                        android:fontFamily="@font/roboto_thin"
+                        android:gravity="center_horizontal"
+                        android:text="Sun"
+                        android:textColor="@color/cardview_dark_background" />
+
+                    <com.uniquestudio.library.CircleCheckBox
+                        android:id="@+id/radioSun"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="false"
+                        android:layout_marginEnd="5dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        app:background_color="@color/blue_grey_900"
+                        app:tick_color="@color/top" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+
+        <Button
+            android:id="@+id/btn_mul"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/h32"
+            android:layout_centerHorizontal="true"
+            android:background="@color/blue_grey_900"
+            android:fontFamily="@font/roboto_thin"
+            android:text="Next"
+            android:textColor="@color/top" />
+
+    </RelativeLayout>
+
+</com.geekworkx.hellocab.Adapters.HeightWrappingViewPager>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <item
+        android:id="@+id/action_item1"
+        android:icon="@android:drawable/ic_notification_overlay"
+        android:menuCategory="container"
+        android:title="Coupon"
+        app:showAsAction="always|withText|collapseActionView" />
+
+    <item
+        android:id="@+id/action_item3"
+        android:icon="@android:drawable/ic_notification_overlay"
+        android:menuCategory="container"
+        android:title="Share"
+        app:showAsAction="always|withText|collapseActionView" />
+
+</menu>

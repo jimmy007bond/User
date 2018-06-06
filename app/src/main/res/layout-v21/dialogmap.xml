@@ -1,0 +1,1226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    >
+
+
+    <android.support.design.widget.CoordinatorLayout
+
+        android:id="@+id/cor_home_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true">
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/rlMapLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            tools:context=".Adapters.GooglemapApp">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/app_bar_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_grey_900"
+                app:expanded="false">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="#80000000"
+                    app:layout_scrollFlags="enterAlways"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="center">
+
+
+                        <TextView
+                            android:id="@+id/textView101"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Hello"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/textView102"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/textView101"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Cab"
+                            android:textColor="@color/yellow_A700"
+                            android:textSize="18dp" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.AppBarLayout>
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:map="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.geekworkx.hellocab.Adapters.CustomMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentStart="true"
+                map:cameraZoom="18"
+                map:mapType="normal">
+
+            </fragment>
+
+            <TextView
+                android:id="@+id/expandText"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/roboto_medium"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                android:text="TextView"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/it2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="54dp"
+                    android:src="@mipmap/ic_pin_green" />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/mySOS"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/app_bar_main"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_sos"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:id="@+id/myLocationCustomButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_above="@+id/ride_detail"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ffv"
+                android:layout_marginBottom="60dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_location"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/it2"
+                android:layout_alignWithParentIfMissing="false"
+                android:layout_below="@+id/ffv"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/dots"
+                android:visibility="gone"/>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/ffv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="60dp"
+                android:background="@android:color/transparent"
+                android:visibility="visible">
+
+                <LinearLayout
+
+                    android:id="@+id/l1"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9">
+
+                        <TextView
+                            android:id="@+id/pick_from"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:drawableStart="@drawable/green_dot"
+                            android:fontFamily="@font/roboto_thin"
+                            android:text="Pickup from"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:id="@+id/et_myLocation_Address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:animateLayoutChanges="true"
+                            android:background="@color/white"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_vertical|start"
+                            android:hint="Pick from"
+                            android:imeOptions="actionDone"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/com_facebook_blue"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/heart_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_heart_empty"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/heart_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_heart"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:id="@+id/l2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="1">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:background="@color/white">
+
+                            <TextView
+                                android:id="@+id/drop_at"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:drawableStart="@drawable/red_dot"
+                                android:fontFamily="@font/roboto_thin"
+                                android:text="Drop at"
+                                android:textSize="8sp" />
+
+                            <TextView
+                                android:id="@+id/et_destLocation_Address"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/drop_at"
+                                android:layout_weight="0.8"
+                                android:animateLayoutChanges="true"
+                                android:background="@color/white"
+                                android:ellipsize="end"
+                                android:enabled="true"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center|start"
+                                android:hint="Drop at"
+                                android:maxLines="2"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/heart_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:src="@mipmap/ic_heart_empty"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/heart_12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:src="@mipmap/ic_heart"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/l12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="60dp"
+                android:background="@android:color/transparent"
+                android:fillViewport="true"
+                android:foregroundGravity="center_horizontal|center"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/l13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:alwaysDrawnWithCache="false"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_horizontal|center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/lmini"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/circular"
+                        android:elevation="10dp"
+                        android:gravity="center_vertical|center_horizontal|center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/mini_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:visibility="gone" />
+
+                        <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+                            android:id="@+id/dot_progress_bar_mini"
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="5dp"
+                            custom:amount="5"
+                            custom:animationDirection="left"
+                            custom:duration="@android:integer/config_mediumAnimTime"
+                            custom:endColor="@android:color/transparent"
+                            custom:startColor="@color/white" />
+
+                        <ImageView
+                            android:id="@+id/car_mini"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center_vertical|center_horizontal|center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:adjustViewBounds="true"
+                            android:background="?android:selectableItemBackground"
+                            android:src="@mipmap/ic_mini" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="Mini"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/lmicro"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/circular"
+                        android:elevation="10dp"
+                        android:gravity="center_vertical|center_horizontal|center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/micro_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:visibility="gone" />
+
+                        <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+                            android:id="@+id/dot_progress_bar_micro"
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="5dp"
+                            custom:amount="5"
+                            custom:animationDirection="left"
+                            custom:duration="@android:integer/config_mediumAnimTime"
+                            custom:endColor="@android:color/transparent"
+                            custom:startColor="@color/white" />
+
+
+                        <ImageView
+                            android:id="@+id/car_micro"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:background="?android:selectableItemBackground"
+                            android:src="@mipmap/ic_micro" />
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="Micro"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/lsedan"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/circular"
+                        android:elevation="10dp"
+                        android:gravity="center_vertical|center_horizontal|center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/sedan_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:visibility="gone" />
+
+                        <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+                            android:id="@+id/dot_progress_bar_sedan"
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="5dp"
+                            custom:amount="5"
+                            custom:animationDirection="left"
+                            custom:duration="@android:integer/config_mediumAnimTime"
+                            custom:endColor="@android:color/transparent"
+                            custom:startColor="@color/white" />
+
+
+                        <ImageView
+                            android:id="@+id/car_sedan"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:background="?android:selectableItemBackground"
+                            android:src="@mipmap/ic_sedan" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="Sedan"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/lpick"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/circular"
+                        android:elevation="10dp"
+                        android:gravity="center_vertical|center_horizontal|center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/muv_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:visibility="gone" />
+
+                        <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+                            android:id="@+id/dot_progress_bar_muv"
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="5dp"
+                            custom:amount="5"
+                            custom:animationDirection="left"
+                            custom:duration="@android:integer/config_mediumAnimTime"
+                            custom:endColor="@android:color/transparent"
+                            custom:startColor="@color/white" />
+
+
+                        <ImageView
+                            android:id="@+id/car_muv"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:background="?android:selectableItemBackground"
+                            android:src="@mipmap/ic_muv" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="PickUp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/lsuv"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/circular"
+                        android:elevation="10dp"
+                        android:gravity="center_vertical|center_horizontal|center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/suv_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:visibility="gone" />
+
+                        <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+                            android:id="@+id/dot_progress_bar_suv"
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="5dp"
+                            custom:amount="5"
+                            custom:animationDirection="left"
+                            custom:duration="@android:integer/config_mediumAnimTime"
+                            custom:endColor="@android:color/transparent"
+                            custom:startColor="@color/white" />
+
+
+                        <ImageView
+                            android:id="@+id/car_suv"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:background="?android:selectableItemBackground"
+                            android:src="@mipmap/ic_suv" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="SUV"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/lamb"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/circular"
+                        android:elevation="10dp"
+                        android:gravity="center_vertical|center_horizontal|center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/ambulance_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:visibility="gone" />
+
+                        <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+                            android:id="@+id/dot_progress_bar_amb"
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="5dp"
+                            custom:amount="5"
+                            custom:animationDirection="left"
+                            custom:duration="@android:integer/config_mediumAnimTime"
+                            custom:endColor="@android:color/transparent"
+                            custom:startColor="@color/white" />
+
+
+                        <ImageView
+                            android:id="@+id/car_amb"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="left"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="?android:selectableItemBackground"
+                            android:src="@mipmap/ic_amb" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="Ambulance"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/ride_later"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.50"
+                    android:background="@color/blue_grey_900"
+                    android:gravity="center_vertical"
+                    android:minHeight="56dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="0.50"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="right"
+                        android:text="Ride"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="left"
+                        android:text="Later"
+                        android:textColor="@color/top"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ride_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_weight="0.50"
+                    android:background="@color/blue_grey_900"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="0.50"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="right"
+                        android:text="Ride"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/textView9"
+                        android:layout_weight="0.50"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="left"
+                        android:text="Now"
+                        android:textColor="@color/top"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:visibility="visible"
+                tools:context=".Adapters.GooglemapApp">
+
+
+                <LinearLayout
+                    android:id="@+id/ride_searching"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/cancel_ride"
+                    android:background="#37a7dd"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_horizontal"
+                        android:hint="Communicating the driver" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@android:color/transparent">
+
+                        <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+                            android:layout_width="128dp"
+                            android:layout_height="16dp"
+                            android:layout_centerInParent="true"
+                            android:background="@android:color/transparent"
+                            custom:amount="5"
+                            custom:animationDirection="left"
+                            custom:duration="@android:integer/config_mediumAnimTime"
+                            custom:endColor="@android:color/holo_blue_light"
+                            custom:startColor="@color/white" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/cancel_ride"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:drawable/screen_background_dark"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Cancel Ride"
+                    android:textColor="@color/top"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar3_map"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="false"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="false"
+                android:visibility="gone" />
+
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/ride_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/card_background"
+                android:fitsSystemWindows="false"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/textotp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/otp_back"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:minEms="6"
+                    android:text="OTP"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:custom="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/choose_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="false"
+                    android:layout_below="@+id/textotp"
+                    android:background="@color/main"
+                    android:fillViewport="true"
+                    android:foregroundGravity="center_horizontal|center"
+                    android:scrollbarSize="0dp"
+                    android:visibility="gone">
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:background="@android:color/transparent"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <Button
+                            android:id="@+id/car_choosen_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginRight="1dp"
+                            android:background="@drawable/car_back"
+                            android:fontFamily="@font/roboto_thin"
+                            android:minWidth="128dp"
+                            android:textColor="@color/top"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/car_choosen_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="1dp"
+                            android:background="@drawable/car_back"
+                            android:fontFamily="@font/roboto_thin"
+                            android:minWidth="128dp"
+                            android:textColor="@color/top"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/car_choosen_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="1dp"
+                            android:background="@drawable/car_back"
+                            android:fontFamily="@font/roboto_thin"
+                            android:minWidth="128dp"
+                            android:textColor="@color/top"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/car_choosen_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="1dp"
+                            android:background="@drawable/car_back"
+                            android:fontFamily="@font/roboto_thin"
+                            android:minWidth="128dp"
+                            android:textColor="@color/top"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/relativeLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_below="@+id/choose_car"
+                    android:background="@color/blue_grey_900"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/relativeLayout3"
+                        android:layout_alignParentBottom="false"
+                        android:layout_alignParentStart="true"
+                        android:background="@android:color/transparent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/driver_image"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="20dp"
+                            android:padding="5dp"
+                            android:src="@drawable/com_facebook_profile_picture_blank_portrait" />
+
+                        <TextView
+                            android:id="@+id/driver_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/ratingBar"
+                            android:layout_alignParentTop="false"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_toEndOf="@+id/driver_image"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_horizontal|center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:id="@+id/ratingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="14dp"
+                            android:layout_toEndOf="@+id/driver_image"
+                            android:background="@android:color/transparent"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <ImageView
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_gravity="start"
+                                android:adjustViewBounds="true"
+                                android:src="@mipmap/ic_star" />
+
+                            <TextView
+                                android:id="@+id/driver_star"
+                                android:layout_width="48dp"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="left|center_vertical"
+                                android:textColor="@color/top"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout3"
+                        android:layout_width="187dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="right|end">
+
+                        <TextView
+                            android:id="@+id/driver_car_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/k"
+                            android:layout_toEndOf="@+id/driver_car"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/driver_type" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/driver_car"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="20dp"
+                            android:padding="5dp"
+                            android:src="@drawable/com_facebook_profile_picture_blank_portrait" />
+
+                        <LinearLayout
+                            android:id="@+id/k"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/driver_car"
+                            android:layout_alignParentBottom="false"
+                            android:layout_alignParentEnd="false"
+                            android:layout_alignParentStart="false"
+                            android:layout_centerHorizontal="false"
+                            android:layout_marginTop="5dp"
+                            android:layout_toEndOf="@+id/driver_car"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/driver_car_no1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:gravity="left|start"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/driver_car_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="start"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/lov1"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_below="@+id/con"
+                    android:background="@color/blue_grey_900"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+
+                        <ImageView
+                            android:id="@+id/i1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="false"
+                            android:layout_toStartOf="@+id/call_driver"
+                            android:adjustViewBounds="false"
+                            android:baselineAlignBottom="false"
+                            android:contentDescription="TODO"
+                            android:background="@android:color/transparent"
+                            android:src="@mipmap/ic_call" />
+
+                        <Button
+                            android:id="@+id/call_driver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="false"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:background="@android:color/transparent"
+                            android:gravity="center"
+                            android:text="Call Driver"
+                            android:textColor="@color/top" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center_vertical"
+                            android:background="@android:color/transparent"
+                            android:layout_toStartOf="@+id/track_driver"
+                            android:src="@mipmap/ic_loction" />
+
+                        <Button
+                            android:id="@+id/track_driver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="false"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:background="@android:color/transparent"
+                            android:text="Track Driver"
+                            android:textColor="@color/top" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/con"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout2"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/cancel_again"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@color/blue_grey_900"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="10dp"
+                        android:text="Cancel Booking"
+                        android:textColor="@color/top" />
+
+                    <Button
+                        android:id="@+id/confirm_ride"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_alignParentBottom="false"
+                        android:layout_below="@+id/relativeLayout3"
+                        android:layout_weight="0.5"
+                        android:background="@color/blue_A200"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="10dp"
+                        android:text="Tap to Confirm Booking"
+                        android:textColor="@color/white"
+                        android:textStyle="normal"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+
+                <android.support.design.widget.BottomNavigationView
+                    android:id="@+id/navigation"
+                    app:itemTextColor="@color/white"
+                    app:menu="@menu/bottom_navigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_below="@+id/con"
+                    android:background="@color/black"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/colorPrimary"
+        app:menu="@menu/activity_nd_drawer"
+        app:headerLayout="@layout/nav_header_main"
+        app:insetForeground="@color/blue_grey_900"
+        />
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_grey_900"
+    android:fitsSystemWindows="true"
+    android:id="@+id/smscor">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_sms"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:drawable/screen_background_dark_transparent"
+            app:expanded="false">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar_sms"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    app:layout_scrollFlags="enterAlways"
+                    app:popupTheme="@style/Theme.AppCompat.NoActionBar"
+                    app:theme="@style/ThemeOverlay.AppCompat.Light">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="center">
+
+
+                        <TextView
+                            android:id="@+id/textView101"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_thin"
+                            android:text="Hello"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/textView101"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_thin"
+                            android:text="Cab"
+                            android:textColor="@color/yellow_A700"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </android.support.v7.widget.Toolbar>
+
+            </RelativeLayout>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <com.geekworkx.hellocab.MyViewPager
+            android:id="@+id/viewPagerVertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_bar_sms"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:fitsSystemWindows="false">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/first_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/app_profile"
+                android:background="@color/blue_grey_900"
+                android:gravity="center_vertical|center"
+                android:orientation="vertical"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="88dp"
+                    android:layout_weight="0.2"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal"
+                    android:justificationMode="inter_word"
+                    android:text="Please share your Contact number"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/l22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignWithParentIfMissing="false"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:adjustViewBounds="true"
+                            android:src="@mipmap/ic_account_grey600_36dp" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/txtL"
+                            style="@style/Widget.Design.TextInputLayout"
+                            app:hintTextAppearance="@style/MyHintText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/top">
+
+                            <EditText
+                                android:id="@+id/u_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="40dp"
+                                android:layout_marginStart="40dp"
+                                android:ems="10"
+                                android:hint="Name"
+                                android:inputType="textPersonName"
+                                android:shadowColor="@color/top"
+                                android:textColor="@color/top"
+                                android:textColorHighlight="@color/top"
+                                android:textColorHint="@color/top"
+                                android:textColorLink="@color/top"
+                                android:theme="@style/MyEditText" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:adjustViewBounds="true"
+                            android:src="@mipmap/ic_phone_grey600_36dp" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/txtL1"
+                            style="@style/Widget.Design.TextInputLayout"
+                            app:hintTextAppearance="@style/MyHintText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/top">
+
+                            <EditText
+                                android:id="@+id/u_mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="40dp"
+                                android:layout_marginStart="40dp"
+                                android:ems="10"
+                                android:hint="Mobile No"
+                                android:inputType="number|phone"
+                                android:shadowColor="@color/top"
+                                android:textColor="@color/top"
+                                android:textColorHighlight="@color/top"
+                                android:textColorHint="@color/top"
+                                android:textColorLink="@color/top"
+                                android:theme="@style/MyEditText" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/accept_tnc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/l22"
+                    android:layout_marginTop="30dp"
+                    android:text="I accept the Terms &amp; conditions and Privacy Policy."
+                    android:textColor="@color/top" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/first_button"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="0.2"
+                    android:gravity="center_horizontal"
+                    android:hint="An OTP will be sent to you shortly" />
+
+                <Button
+                    android:id="@+id/first_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/com_facebook_tooltip_black_background"
+                    android:fontFamily="@font/roboto_thin"
+                    android:text="GET OTP"
+                    android:textColor="@color/top"
+                    android:theme="@style/Widget.AppCompat.Button.Borderless.Colored" />
+            </RelativeLayout>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/second_pager_"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue_grey_900"
+                android:gravity="center_vertical|center"
+                android:orientation="vertical"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:hint="Please enter the OTP "
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:textSize="24sp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tl2"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:textColorHint="@color/white">
+
+                    <EditText
+                        android:id="@+id/inputOtp"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center"
+                        android:layout_marginTop="20dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_horizontal"
+                        android:hint="@string/lbl_enter_otp"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:padding="10dp"
+                        android:shadowColor="@color/top"
+                        android:textColor="@color/top"
+                        android:textColorHighlight="@color/top"
+                        android:textColorHint="@color/top"
+                        android:textColorLink="@color/top"
+                        android:textCursorDrawable="@null"
+                        android:textSize="18sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/second_butona"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/com_facebook_tooltip_black_background"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Next"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp"
+                        android:text="Did not receive OTP!"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+                    <Button
+                        android:id="@+id/button_resend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_weight=".2"
+                        android:background="@android:color/transparent"
+                        android:gravity="right|center"
+                        android:text="RESEND"
+                        android:textColor="@color/green_A400"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </com.geekworkx.hellocab.MyViewPager>
+
+
+        <ProgressBar
+            android:id="@+id/progress_rider"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
